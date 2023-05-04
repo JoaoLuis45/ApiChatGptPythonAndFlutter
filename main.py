@@ -20,9 +20,9 @@ def read_root():
     return {f"resposta": {resposta}}
 
 @app.post("/prompt/")
-async def post_prompt(pergunta: str = Form()):
+async def post_prompt(pergunta: dict):
     openai.api_key = os.environ['apiKey']
-    prompt = pergunta
+    prompt = pergunta['pergunta']
     response = openai.Completion.create(
     model="text-davinci-003",
     max_tokens=2000,
