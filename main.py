@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    openai.api_key = "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"
+    openai.api_key = "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"
     prompt = "conte uma historia"
     response = openai.Completion.create(
     model="text-davinci-003",
