@@ -10,7 +10,7 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     openai.api_key = os.environ['apiKey']
-    prompt = "conte uma historia"
+    prompt = "meu nome é?"
     response = openai.Completion.create(
     model="text-davinci-003",
     max_tokens=2000,
