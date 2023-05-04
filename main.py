@@ -5,14 +5,11 @@ import dotenv
 
 dotenv.load_dotenv()
 
-
-openai.organization = "org-sHhTfBhVTYc2lXrKeFyhWhwK"
-openai.api_key = "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"
-
 app = FastAPI()
 
 @app.get("/")
 def read_root():
+    openai.api_key = "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"
     prompt = "conte uma historia"
     response = openai.Completion.create(
     model="text-davinci-003",
